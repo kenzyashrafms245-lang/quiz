@@ -1,0 +1,419 @@
+:root {
+    --bg-color: #f7f7f7;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: "Montserrat", sans-serif;
+}
+
+a,
+span {
+    display: inline-block;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.py-7 {
+    margin-top: 90px;
+}
+
+
+
+
+
+/* header */
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6)), url(../imgs/bg.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.navbar-nav .nav-link.active {
+    color: white;
+}
+
+.navbar-nav .nav-link {
+    color: white;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 10%;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background-color: currentColor;
+    transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-link.active::after {
+    width: 80%;
+}
+
+
+#navbar-example {
+    transition: background 0.3s ease, padding 0.3s ease;
+    background: transparent;
+}
+
+#navbar-example .nav-link,
+#navbar-example .navbar-brand {
+    color: #fff !important;
+    transition: color 0.3s ease;
+}
+
+
+#navbar-example.scrolled {
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#navbar-example.scrolled .nav-link,
+#navbar-example.scrolled .navbar-brand {
+    color: #000 !important;
+}
+
+
+.logos {
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+/* about-me-section */
+.hero img:nth-of-type(2) {
+    position: absolute;
+    top: 13%;
+    left: -5%;
+    z-index: -1;
+    height: 90%;
+
+}
+
+.p1 {
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.p2 {
+    line-height: 1.6;
+    color: #748182;
+}
+
+.progress-bar {
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.progress {
+    height: 25px;
+}
+
+.progress-bar {
+    font-size: 13px;
+    line-height: 25px;
+}
+
+
+.btn {
+    color: white;
+    background-color: black;
+    width: 25%;
+    transition: all 500ms;
+}
+
+.btn:hover {
+    background-color: transparent;
+    border: 1px solid black;
+}
+
+.btn2 {
+    color: #555;
+    background-color: transparent;
+    border: 1px solid black;
+    transition: all 500ms;
+}
+
+.btn2:hover {
+    color: white;
+    background-color: black;
+    width: 25%;
+
+}
+
+.services-section {
+    background-color: var(--bg-color);
+}
+
+.header h3 {
+
+    z-index: 0;
+}
+
+.header h3::after {
+    content: "";
+    width: 100%;
+    height: 50px;
+    background-image: url(../imgs/dots.png);
+    /* background-repeat: repeat; */
+    position: absolute;
+    bottom: 30%;
+    left: 0;
+    z-index: -1;
+}
+
+.icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--bg-color);
+}
+
+.card {
+    transition: all 1s ease;
+}
+
+.card:hover .icon {
+    background-color: #343434;
+    color: var(--bg-color);
+
+}
+
+.nav-pills .nav-link.active {
+    background-color: transparent;
+    color: black;
+    position: relative;
+}
+
+.nav-pills .nav-link.active::after {
+    content: "";
+    position: absolute;
+    width: 70%;
+    height: 3px;
+    bottom: 10%;
+    left: 15%;
+    background-color: black;
+}
+
+.nav-pills .nav-link {
+    color: black;
+}
+
+.overlay {
+    position: absolute;
+    inset: 2%;
+    background-color: rgba(255, 255, 255, 0.8);
+
+    z-index: 1;
+    opacity: 0;
+}
+
+.fontawesom {
+    width: 30px;
+    height: 30px;
+    background-color: #333;
+    border-radius: 50%;
+    color: #f7f7f7;
+    transition: all 500ms;
+}
+
+.imgs {
+    transition: opacity 1s 100ms;
+}
+
+.imgs:hover .overlay {
+    opacity: 1;
+
+}
+
+.text {
+    opacity: 0;
+    transition: all 1s 100ms;
+}
+
+.imgs:hover .text {
+    opacity: 1;
+
+}
+
+
+.fontawesom:hover {
+    background-color: transparent;
+    border: 1px solid black;
+    color: #333;
+}
+
+.testemonial {
+    background-color: var(--bg-color);
+}
+
+.carousel-inner img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #869791;
+
+}
+
+.carousel-item p,
+h6 {
+    font-size: 15px;
+    color: #748182;
+}
+
+.clients p {
+    color: #748182;
+}
+
+.our-team {
+    background-color: var(--bg-color);
+    padding-block: 40px;
+}
+
+.our-team .card-body {
+    background: #535353;
+
+}
+
+.card {
+    overflow: hidden;
+}
+
+.card-img-container {
+    overflow: hidden;
+}
+
+.card-img-container img {
+    transition: all 1s;
+}
+
+.card .layer {
+    background-color: rgba(255, 255, 255, 0.8);
+    inset: 1%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 1s ease;
+
+}
+
+.our-team-icons {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+    transition: all 500ms ease;
+}
+
+.our-team-icons:hover {
+    background-color: transparent;
+    color: black;
+    border: 1px solid black;
+}
+
+.card:hover .layer {
+    opacity: 1;
+    transform: rotatey(360deg);
+}
+
+.card-img-container:hover img {
+    transform: scale(1.2);
+}
+
+.contact-us span {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--bg-color);
+}
+
+.contact-us h6 {
+    color: #343434;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.contact-us p {
+    color: #748182;
+}
+
+.contact {
+    transition: all 1s;
+}
+
+.contact:hover span {
+    background-color: black;
+    color: white;
+}
+
+.form-control {
+    background-color: var(--bg-color);
+    border-color: transparent;
+}
+
+
+
+.contact-us .form-control {
+    border: 1px solid var(--bg-color);
+   
+    border-radius: 5px;
+   
+    box-shadow: none;
+    outline: none;
+}
+
+
+.contact-us .form-control:focus {
+    background-color: #f7f7f7;
+    border: 1px solid #f7f7f7 !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.contact-us button {
+    width: 130px;
+}
+
+footer {
+    background: #1c1c1c;
+    padding: 20px;
+}
+
+footer p {
+    color: #748182;
+}
